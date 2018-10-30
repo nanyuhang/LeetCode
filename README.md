@@ -1,2 +1,1 @@
-# LeetCode
-<a href="./Two-Sum"></a>
+<a href="./Two-Sum">Two_sum</a>
