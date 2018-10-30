@@ -1,0 +1,26 @@
+package solution;
+
+public class sulution {
+
+	public int[] twoSum(int[] nums, int target) {
+		int length = nums.length;
+		int j, i, index_j = 0, index_i = 0, temp = 0;
+		for (j = 0; j < length; j++) {
+			temp = target - nums[j];
+			for (i = j + 1; i < length; i++) {
+				if (temp == nums[i]) {
+					index_j = i;
+					break;
+				}
+			}
+			if (index_j != 0) {
+				index_i = j;
+				break;
+			}
+		}
+		int[] a = new int[2];
+		a[0] = index_i;
+		a[1] = index_j;
+		return a;
+	}
+}
