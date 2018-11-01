@@ -1,0 +1,33 @@
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+      	int a = s.length();
+		if (a == 0)
+			return 0;
+		String str1 = "";
+		for (int i = 0; i < a; i++) {
+			if (!str1.contains("" + s.charAt(i)))
+				str1 = str1 + s.charAt(i);
+		}
+		int length = str1.length();
+		String find = "";
+		int temp = 0;
+		for (int i = 0; i < a; i++) {
+			if (!find.contains("" + s.charAt(i))) {
+				find = find + s.charAt(i);
+				System.out.println(find);
+			} else {
+				if (find.length() == length)
+					return length;
+				if (find.length() > temp) {
+					temp = find.length();
+				}
+				int digit = find.length() - find.indexOf("" + s.charAt(i));
+				find = s.substring(i - digit + 1, i + 1);
+			}
+		}
+		if (find.length() > temp)
+			return find.length();
+		else
+			return temp;
+    }
+}
