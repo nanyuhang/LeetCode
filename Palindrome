@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+       int first = x, last = x, count = 1;
+		if (x >= 0 && x <= 9)
+			return true;
+		if (x < 0 || (x % 10 == 0))
+			return false;
+		while ((first /= 10) != 0) {
+			count++;
+		}
+		int start = count / 2;
+		int value = 0, exp = count - start;
+		while (start > 0) {
+			value = value * 10 + last % 10;
+			last /= 10;
+			start--;
+		}
+		if (value == (x /= Math.pow(10, exp)))
+			return true;
+		return false;
+    }
+}
