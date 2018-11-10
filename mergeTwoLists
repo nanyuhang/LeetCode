@@ -1,0 +1,62 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+       if(l1==null&&l2==null) return null;
+		ListNode l3=null;
+		ListNode temp1=l1,temp2=l2,temp3=null;
+		if(l1==null||l2==null) {
+			if(l1==null&&l2==null) return null;
+			if(l1!=null) {
+				temp3=l3=new ListNode(l1.val);
+				temp1=temp1.next;
+			}else {
+				temp3=l3=new ListNode(l2.val);
+				temp2=temp2.next;
+			}
+		}else {
+			if(l1.val<l2.val) {
+				temp3=l3=new ListNode(l1.val);
+				temp1=temp1.next;
+			}else {
+				temp3=l3=new ListNode(l2.val);
+				temp2=temp2.next;
+			}
+		}
+		
+		while(temp1!=null && temp2!=null) {
+			if(temp1.val <= temp2.val) {
+				if(temp1.val >= temp3.val) {
+					temp3.next=new ListNode(temp1.val);
+					temp3=temp3.next;
+					temp1=temp1.next;
+				}
+			}else {
+				if(temp2.val >= temp3.val) {
+					temp3.next=new ListNode(temp2.val);
+					temp3=temp3.next;
+					temp2=temp2.next;
+				}
+			}
+		}
+		
+		
+		while(temp1!=null) {
+			temp3.next=new ListNode(temp1.val);
+			temp1=temp1.next;
+			temp3=temp3.next;
+		}
+		while(temp2!=null) {
+			temp3.next=new ListNode(temp2.val);
+			temp2=temp2.next;
+			temp3=temp3.next;
+		}
+		return l3;
+    }
+}
