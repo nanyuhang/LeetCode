@@ -8,6 +8,7 @@
 <a href="./longestCommonPrefix">14-longestCommonPrefix</a><br>
 <a href="./isValid">20-isValid</a><br>
 <a href="./mergeTwoLists">21-mergeTwoLists</a><br>
+<a href="./removeDuplicates">26-removeDuplicates</a><br>
 
 
 
