@@ -9,6 +9,8 @@
 <a href="./isValid">20-isValid</a><br>
 <a href="./mergeTwoLists">21-mergeTwoLists</a><br>
 <a href="./removeDuplicates">26-removeDuplicates</a><br>
+<a href="./removeElement">27-removeElement</a><br>
+
 
 
 
