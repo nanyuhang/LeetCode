@@ -12,6 +12,7 @@
 <a href="./removeElement">27-removeElement</a><br>
 <a href="./strStr">28-strStr</a><br>
 <a href="./searchInsert">35-searchInsert</a><br>
+<a href="./countAndSay">38-countAndSay</a><br>
 
 
 
