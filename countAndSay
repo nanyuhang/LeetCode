@@ -1,0 +1,22 @@
+class Solution {
+	public String countAndSay(int n) {
+		if (n == 1) {
+			return "1";
+		}
+		// 后面的结果由前面的进行确定
+		String str = countAndSay(n - 1);
+
+		StringBuilder result = new StringBuilder();
+		// 从子串的下标为1开始quick进行搜索并确定一个下标为0的slow基准，若相等则quick++当找到不同时，则quick-slow等于个数，charAt等于当前
+		// 计数完毕的值，将该值加入后进行位置的重新确定即slow=quick
+		// 特殊情况当quick为结尾时判断结束,然后进行响应的处理，记录当前的值即个数
+		for (int quick = 1, slow = 0; quick <= str.length(); quick++) {
+			if (quick == str.length() || str.charAt(quick) != str.charAt(slow)) {
+				result.append(quick - slow);
+				result.append(str.charAt(slow));
+				slow = quick;
+			}
+		}
+		return result.toString();
+	}
+}
