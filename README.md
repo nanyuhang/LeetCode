@@ -17,6 +17,9 @@
 <a href="./lengthOfLastWord">58-lengthOfLastWord</a><br>
 <a href="./plusOne">66-plusOne</a><br>
 <a href="./addBinary">67-addBinary</a><br>
+<a href="./mySqrt">69-mySqrt</a><br>
+
+
 
 
 
