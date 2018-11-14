@@ -15,6 +15,8 @@
 <a href="./countAndSay">38-countAndSay</a><br>
 <a href="./maxSubArray">53-maxSubArray</a><br>
 <a href="./lengthOfLastWord">58-lengthOfLastWord</a><br>
+<a href="./plusOne">66-plusOne</a><br>
+
 
 
 
