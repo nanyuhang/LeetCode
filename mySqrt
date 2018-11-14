@@ -1,0 +1,17 @@
+class Solution {
+	public int mySqrt(int x) {
+		if (x <= 1)
+			return x;
+		int low = 0, high = x;
+		while (low < high) {
+			// 得出结果前一步时，区间长度小于等于1
+			int mid = low + (high - low) / 2;
+			if (x / mid >= mid) {
+				low = mid + 1;
+			} else {
+				high = mid;
+			}
+		}
+		return low - 1;
+	}
+}
