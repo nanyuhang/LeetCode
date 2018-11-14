@@ -1,0 +1,49 @@
+class Solution {
+	public String addBinary(String a, String b) {
+		StringBuilder resulttemp = new StringBuilder();
+		int length = a.length();
+		if (b.length() < a.length())
+			length = b.length();
+		int local = 0;
+		int ai = a.length() - 1;
+		int bj = b.length() - 1;
+		for (; ai >= 0 && bj >= 0; ai--, bj--) {
+			int x = a.charAt(ai) + b.charAt(bj) - 96 + local;
+			if (x >= 2) {
+				local = 1;
+				resulttemp.append(x % 2);
+			} else {
+				local = 0;
+				resulttemp.append(x % 2);
+			}
+		}
+		if (ai < 0) {
+			for (; bj >= 0; bj--) {
+				int x = b.charAt(bj) + local - 48;
+				if (x >= 2) {
+					local = 1;
+					resulttemp.append(x % 2);
+				} else {
+					local = 0;
+					resulttemp.append(x % 2);
+				}
+			}
+		}
+		if (bj < 0) {
+			for (; ai >= 0; ai--) {
+				int x = a.charAt(ai) + local - 48;
+				if (x >= 2) {
+					local = 1;
+					resulttemp.append(x % 2);
+				} else {
+					local = 0;
+					resulttemp.append(x % 2);
+				}
+			}
+		}
+		if (local == 1)
+			return "1" + resulttemp.reverse().toString();
+		else
+			return resulttemp.reverse().toString();
+	}
+}
