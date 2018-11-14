@@ -1,0 +1,24 @@
+class Solution {
+	public int[] plusOne(int[] digits) {
+		int length = digits.length;
+		if (length == 0)
+			return null;
+		int local = 1;
+		for (int i = length - 1; i >= 0; i--) {
+			if ((digits[i] += local) >= 10) {
+				digits[i] = digits[i] % 10;
+				local = 1;
+			} else
+				local = 0;
+		}
+		if (local == 1) {
+			int[] result = new int[length + 1];
+			result[0] = 1;
+			for (int j = 1; j <= length; j++) {
+				result[j] = digits[j - 1];
+			}
+			return result;
+		}
+		return digits;
+	}
+}
