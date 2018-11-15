@@ -20,6 +20,8 @@
 <a href="./mySqrt">69-mySqrt</a><br>
 <a href="./climbStairs">70-climbStairs</a><br>
 <a href="./deleteDuplicates">83-deleteDuplicates</a><br>
+<a href="./merge">88-merge</a><br>
+
 
 
 
