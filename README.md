@@ -23,6 +23,7 @@
 <a href="./merge">88-merge</a><br>
 <a href="./isSameTree">100-isSameTree</a><br>
 <a href="./isSymmetric">101-isSymmetric</a><br>
+<a href="./binaryTree-maxDepth">104-binaryTree-maxDepth</a><br>
 
 
 
