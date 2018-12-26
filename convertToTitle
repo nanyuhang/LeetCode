@@ -1,0 +1,20 @@
+class Solution {
+    public String convertToTitle(int n) {
+        String result=" ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+	     StringBuffer temp=new StringBuffer();
+	     if(n<26) return ""+result.charAt(n);
+	     int t=0;
+	     while(n>0) {
+	    	 t=n%26;
+	    	 if(t==0){
+	    		 n/=26;
+	    		 n--;
+	    		 temp.append("Z");
+	    	 }else {
+	    		 n/=26;
+		    	 temp.append(result.charAt(t));
+	    	 }
+	     }
+	        return temp.reverse().toString();
+    }
+}
