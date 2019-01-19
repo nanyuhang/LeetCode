@@ -1,0 +1,28 @@
+class Solution {
+public int Height(TreeNode root, int deep) {
+
+		if (root == null)
+			return 10000;
+		else {
+			if (root.left == null && root.right == null)
+				return ++deep;
+			else
+				deep++;
+		}
+
+		int l = Height(root.left, deep);
+		int r = Height(root.right, deep);
+		return Math.min(l, r);
+	}
+
+	public int minDepth(TreeNode root) {
+		if (root == null)
+			return 0;
+        if(root.left==null && root.right == null)
+            return 1;
+		int l = Height(root.left, 1);
+		int r = Height(root.right, 1);
+
+		return Math.min(l, r);
+	}
+}
