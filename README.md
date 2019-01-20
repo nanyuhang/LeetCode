@@ -28,6 +28,7 @@
 <a href="./levelOrderBottom-version2">107-levelOrderBottom-version2</a><br>
 <a href="./isBalanced">110-isBalanced</a><br>
 <a href="./minDepth">111-minDepth</a><br>
+<a href="./hasPathSum">112-hasPathSum</a><br>
 <a href="./convertToTitle">168-convertToTitle</a><br>
 <a href="./titleToNumber">171-titleToNumber</a><br>
 <a href="./isPalindrome">125-isPalindrome</a><br>
